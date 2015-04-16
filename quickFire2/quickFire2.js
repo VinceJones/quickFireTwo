@@ -13,15 +13,17 @@ var masterArray = [array1, array2, array3, array4, array5, array6];
 
 function funWithArrays (array) {
 	for (i = 0; i < array.length; i++) {
-		for (j = 1; j < array[i].length; j++) {
-			newArray.push(" " + ((array[i][j] + 1) * 2) );
+		for (j = 0; j < array[i].length; j++) {
+			array[i][j] = (array[i][j] + 1) * 2;
+			newArray.push(" " + array[i][j] );
 		} 
+		console.log(array[i]);
 	}	
+	return newArray;
 }
 
-for (i = 0; i < masterArray.length; i++) {
-		console.log( masterArray[i] );
-}
+funWithArrays(masterArray);
+
 
 
 
